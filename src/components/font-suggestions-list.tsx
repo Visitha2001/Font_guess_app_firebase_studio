@@ -37,7 +37,7 @@ export function FontSuggestionsList({ suggestions, isLoading, error }: FontSugge
     return (
       <section aria-live="polite" aria-busy="true" className="w-full max-w-4xl mx-auto">
         <h2 className="text-2xl font-bold font-headline mb-6 text-center">Identifying your font...</h2>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
             <SuggestionSkeleton />
             <SuggestionSkeleton />
             <SuggestionSkeleton />
@@ -63,7 +63,7 @@ export function FontSuggestionsList({ suggestions, isLoading, error }: FontSugge
   return (
     <section aria-live="polite" className="w-full max-w-4xl mx-auto">
       <h2 className="text-2xl font-bold font-headline mb-6 text-center">We found these fonts!</h2>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2">
         {suggestions.map((suggestion, index) => (
           <FontSuggestionCard key={index} suggestion={suggestion} />
         ))}
